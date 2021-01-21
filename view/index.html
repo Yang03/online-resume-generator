@@ -4,12 +4,21 @@
    <meta charset="utf-8" />
    <link  href="./index.css" rel="stylesheet" />
    <style type="text/css" media="print, screen">
-      div, section, aside, main {
-        -webkit-print-color-adjust:exact;
-        -moz-print-color-adjust:exact;
-        -ms-print-color-adjust:exact;
-        print-color-adjust:exact;
-      }
+       @media print {
+        /* ... */
+        div, section, aside, main {
+         -webkit-print-color-adjust:exact;
+         -moz-print-color-adjust:exact;
+         -ms-print-color-adjust:exact;
+         print-color-adjust:exact;
+          overfolw-y: hidden;
+        }
+
+        * {
+          margin: 0;
+          padding: 0
+        }
+    }
    </style>
   </head>
   <body>

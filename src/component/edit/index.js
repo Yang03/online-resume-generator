@@ -16,7 +16,7 @@ export default function EditPanel(props) {
 
 
   const close = () => {
-    dispatch({type: 'HIDE_EDIT_MODULE'})
+    dispatch({ type: 'HIDE_EDIT_MODULE' })
   }
 
   const change = (key, value) => {
@@ -81,7 +81,7 @@ export default function EditPanel(props) {
               {
                 schema.properties.map((proto) => {
                   keys = Object.keys(proto)
-                  return keys.map(item => <div className="form-item"><label>{proto[item].title}</label><input name={item} defaultValue={data[item]} onChange={(e) => changeArray(item, e.target.value, idx)}  /></div>)
+                  return keys.map(item => <div className="form-item"><label>{proto[item].title}</label><textarea name={item} defaultValue={data[item]} onChange={(e) => changeArray(item, e.target.value, idx)}></textarea></div>)
                 })
               }
 

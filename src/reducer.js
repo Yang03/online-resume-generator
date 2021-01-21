@@ -1,16 +1,18 @@
 const reducer = (state = {}, action) => {
   const { type, payload = {} } = action
+  const { data = {} } = payload;
   const { modules = []} = state
-  const { moduleIndex } = payload
+  const index = modules.findIndex((item) => item.component === data.component)
   switch (type) {
     case 'DELETE_MODULE':
-      modules.splice(moduleIndex, 1)
+      modules.splice(index, 1)
       return {
         ...state,
         modules: [...modules]
       }
     case 'EDIT_MODULE':
-      const editModule = modules[moduleIndex]
+
+      const editModule = modules[index]
       return {
         ...state,
         edit: true,
@@ -24,7 +26,6 @@ const reducer = (state = {}, action) => {
     }
     case 'UPDATE_MODULE':
       const { data } = payload
-      const index = modules.findIndex((item) => item.component === data.component)
       modules[index] = data
       return {
         ...state,

@@ -4,15 +4,24 @@
    <meta charset="utf-8" />
    <link  href="./index.css" rel="stylesheet" />
    <style type="text/css" media="print, screen">
-      div, section, aside, main {
-        -webkit-print-color-adjust:exact;
-        -moz-print-color-adjust:exact;
-        -ms-print-color-adjust:exact;
-        print-color-adjust:exact;
-      }
+       @media print {
+        /* ... */
+        div, section, aside, main {
+         -webkit-print-color-adjust:exact;
+         -moz-print-color-adjust:exact;
+         -ms-print-color-adjust:exact;
+         print-color-adjust:exact;
+          overfolw-y: hidden;
+        }
+
+        * {
+          margin: 0;
+          padding: 0
+        }
+    }
    </style>
   </head>
   <body>
     <div id="app"></div>
-  <script type="text/javascript" src="index.7cc389b.js"></script></body>
+  <script type="text/javascript" src="index.fec32e8.js"></script></body>
 <html>

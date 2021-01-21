@@ -6,6 +6,9 @@ import appContext from './appContext'
 
 import Avatar from './component/avatar'
 import UserInfo from './component/userInfo'
+import Contact from './component/contact'
+import StackInfo from './component/stack'
+import WorkExperience from  './component/workExperience'
 
 import DeleteAction from './component/delete'
 import EditPanel from './component/edit'
@@ -16,6 +19,9 @@ import './app.scss';
 const ComponentMap = {
   Avatar,
   UserInfo,
+  Contact,
+  Stack: StackInfo,
+  WorkExperience
 }
 
 function App() {
@@ -49,10 +55,10 @@ function App() {
       }
       return (
         <div
-          className={`${item.component}-module`}
+          className={`${item.component}-module module`}
           id={item.component}
         >
-        <DeleteAction moduleIndex={idx}>
+        <DeleteAction currentModule={item}>
           <Component
             data={item.defaultData}
           />
