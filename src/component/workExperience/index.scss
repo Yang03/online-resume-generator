@@ -3,11 +3,11 @@
 
    li {
      // list-style: circle;
-     color: #607d8b;
+     color: var(--primary-color);
    }
    h3 {
      font-weight: normal;
-     color: #607d8b;
+     color: var(--primary-color);
      font-size: 18px;
      padding-bottom: 10px;
      display: inline-block;

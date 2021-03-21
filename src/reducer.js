@@ -27,10 +27,11 @@ const reducer = (state = {}, action) => {
     case 'UPDATE_MODULE':
       const { data } = payload
       modules[index] = data
-      return {
+      const newData = {
         ...state,
         modules: [...modules]
       }
+      return newData;
     default:
       return state
   }

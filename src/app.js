@@ -12,6 +12,7 @@ import WorkExperience from  './component/workExperience'
 
 import DeleteAction from './component/delete'
 import EditPanel from './component/edit'
+import Theme from './component/theme'
 
 import './app.scss';
 
@@ -69,6 +70,7 @@ function App() {
   }
   return (
     <appContext.Provider value={{ dispatch, modules, editModule}}>
+      <Theme />
       <aside>
         {renderModules(asideModules)}
       </aside>

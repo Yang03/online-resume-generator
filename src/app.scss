@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #607d8b;  
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -33,4 +38,26 @@ main {
 
 .module {
   margin-bottom: 20px
+}
+
+svg {
+  vertical-align: 0px !important;
+
+  path {
+    fill: var(--primary-color);
+  }
+}
+
+.theme {
+  position: fixed;
+  left: 0;
+  top: 10px;
+
+  ul, li {
+    list-style: none;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    margin-right: 10px;
+  }
 }
